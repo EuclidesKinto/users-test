@@ -10,6 +10,7 @@
     <!-- Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -17,7 +18,7 @@
 <div class="min-h-screen bg-gray-100">
 
     <!-- Page Content -->
-    <main class="flex flex-no-wrap">
+    <main class="flex flex-no-wrap" x-data="{ open: false }">
         @include('layouts.left')
         @yield('content')
     </main>

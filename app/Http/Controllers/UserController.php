@@ -58,7 +58,7 @@ class UserController extends Controller
                 'state_id' =>  $data['state_id'],
             ]);
 
-            $address = Address::create([
+            Address::create([
                 'user_id' =>  $user->id,
                 'zip_code' =>  $data['zip_code'],
                 'street' =>  $data['street'],
@@ -75,11 +75,10 @@ class UserController extends Controller
                 'whatsapp' =>  $data['whatsapp'],
             ]);
 
-
             session()->flash('message', 'Usuário cadastrado com sucesso!');
             return redirect()->route('users.index');
         } catch (\Throwable $th) {
-            //throw $th;
+            dd('errro');
         }
     }
 
